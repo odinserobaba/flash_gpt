@@ -19,7 +19,7 @@ def index():
         )
         response_text = response.choices[0].text.strip()
         response_text = markdown2.markdown(response_text)
-    return render_template('index.html', response_text=response_text)
+    return render_template('templates/index.html', response_text=response_text)
 
 if __name__ == '__main__':
     app.run(debug=True)
