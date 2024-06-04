@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI API with Markdown</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/markdown-css/1.0.0/markdown.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .response {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OpenAI API with Markdown</h1>
+        <form method="post">
+            <textarea name="prompt" rows="5" style="width: 100%;" placeholder="Введите ваш запрос..."></textarea>
+            <button type="submit" style="margin-top: 10px;">Отправить</button>
+        </form>
+        {% if response_text %}
+        <div class="response markdown-body">
+            {{ response_text|safe }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
