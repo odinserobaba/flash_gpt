@@ -5,7 +5,7 @@ import markdown2
 app = Flask(__name__)
 
 # Ваш ключ OpenAI API
-openai.api_key = ''
+openai.api_key = 'sk-proj-SxFImaW9xwu94oCHyPpDT3BlbkFJrvWGHpxNZwruH79dy5Gk'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
