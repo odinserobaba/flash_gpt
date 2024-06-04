@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import openai
 import markdown2
-
+import os
 app = Flask(__name__)
 
 # Ваш ключ OpenAI API
@@ -22,4 +22,4 @@ def index():
     return render_template('index.html', response_text=response_text)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
